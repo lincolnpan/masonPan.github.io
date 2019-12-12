@@ -191,3 +191,16 @@ document.body.setHomePage(window.location);
 alert("您好,您的浏览器不支持自动设置页面为首页功能,请您手动在浏览器里设置该页面为首页!");
 }
 }
+
+$(function () {
+	$('.navbar-toggle').click(function () {
+		if ($(this).hasClass('fadeIn')) {
+			$('.navbar-collapse').slideUp();
+			$(this).removeClass('fadeIn');
+		} else {
+			$(this).addClass('fadeIn');
+			$('.navbar-collapse').slideDown();
+
+		}
+	})
+})
